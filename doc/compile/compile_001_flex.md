@@ -1,6 +1,6 @@
 ## case
 
-已知有 Go 文件 [main.go](compile_001_flex/main.go)，請使用 lex 工具對其進行詞法分析。
+已知有 Go 文件 [hello.go](compile_001_flex/hello.go)，請使用 lex 工具對其進行詞法分析。
 
 ## solution
 
@@ -23,10 +23,10 @@ lex lexer.l
 cc lex.yy.c -o lexer -ll
 ```
 
-（4）分析 [main.go](compile_001_flex/main.go) 中詞法
+（4）分析 [hello.go](compile_001_flex/hello.go) 中詞法
 
 ```bash
-cat main.go | ./lexer
+cat hello.go | ./lexer
 ```
 
 執行結果爲：
