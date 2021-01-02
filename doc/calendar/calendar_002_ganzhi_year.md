@@ -19,46 +19,7 @@ const gs = "甲乙丙丁戊己庚辛壬癸"
 const zs = "子丑寅卯辰巳午未申酉戌亥"
 ```
 
-第一種思路是：先求出所有合法的組合，然後窮盡所有組合，如組合不在合法組合中即是非法組合，輸出即可，編程到函數 f1 如下：
-
-```go
-func f1() {
-	// 天干數組
-	garr := []rune(gs)
-	// 地支數組
-	zarr := []rune(zs)
-	// 保存合法的干支組合的Map
-	// Key爲干支，Value爲天干索引與地支索引之和
-	tdmap := make(map[string]int)
-
-	// 將干支組合保存到Map中，直到出現第一個重複項就停止遍歷
-	for i, j := 0, 0; i < len(garr) && j < len(zarr); i, j = (i+1)%len(garr), (j+1)%len(zarr) {
-		k := string(garr[i]) + string(zarr[j])
-		if _, ok := tdmap[k]; ok {
-			break
-		}
-		tdmap[k] = i + j
-	}
-
-	// 輸出所有合法的組合
-	println("\n所有合法的組合：")
-
-	for k, v := range tdmap {
-		fmt.Printf("%s:%d ", k, v)
-	}
-
-	// 輸出所有非法的組合
-	println("\n所有非法的組合：")
-	for i := 0; i < len(garr); i++ {
-		for j := 0; j < len(zarr); j++ {
-			k := string(garr[i]) + string(zarr[j])
-			if _, ok := tdmap[k]; !ok {
-				fmt.Printf("%s:%d ", k, i+j)
-			}
-		}
-	}
-}
-```
+第一種思路是：先求出所有合法的組合，然後窮盡所有組合，如組合不在合法組合中即是非法組合，輸出即可，代碼見 [函數f1](calendar_002_ganzhi_year/main.go)
 
 輸出結果爲：
 
@@ -73,24 +34,7 @@ func f1() {
 
 觀察發現，所有合法的組合的Value值都是偶數，所有非法的組合的Value值都是奇數。
 
-因此有第二種思路求出非法組合：
-
-```go
-func f2() {
-	garr := []rune(gs)
-	zarr := []rune(zs)
-
-	// 輸出所有非法的組合
-	println("\n所有非法的組合：")
-	for i := 0; i < len(garr); i++ {
-		for j := 0; j < len(zarr); j++ {
-			if (i+j)%2 != 0 {
-				fmt.Printf("%s:%d ", string(garr[i])+string(zarr[j]), i+j)
-			}
-		}
-	}
-}
-```
+因此有第二種思路求出非法組合，代碼見 [函數f2](calendar_002_ganzhi_year/main.go)
 
 輸出結果：
 
@@ -101,27 +45,6 @@ func f2() {
 
 很棒，跟思路一的非法組合一致。
 
-學過小學數學的都知道，奇數+偶數=奇數，奇數+奇數=偶數，偶數+偶數=偶數。於是有了第三種思路，只要保證 i 和 j 的奇偶性不同即可保證 i 和 j 的組合爲非法組合。代碼如下：
-
-```go
-func f3() {
-	garr := []rune(gs)
-	zarr := []rune(zs)
-
-	// 輸出所有非法的組合
-	println("\n所有非法的組合：")
-	for i := 0; i < len(garr); i++ {
-		if i%2 == 0 {
-			for j := 1; j < len(zarr); j = j + 2 {
-				fmt.Printf("%s:%d ", string(garr[i])+string(zarr[j]), i+j)
-			}
-		} else {
-			for j := 0; j < len(zarr); j = j + 2 {
-				fmt.Printf("%s:%d ", string(garr[i])+string(zarr[j]), i+j)
-			}
-		}
-	}
-}
-```
+學過小學數學的都知道，奇數+偶數=奇數，奇數+奇數=偶數，偶數+偶數=偶數。於是有了第三種思路，只要保證 i 和 j 的奇偶性不同即可保證 i 和 j 的組合爲非法組合。代碼見 [函數f3](calendar_002_ganzhi_year/main.go)
 
 輸出結果同思路二的一致。

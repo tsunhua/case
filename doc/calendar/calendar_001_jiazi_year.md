@@ -4,20 +4,7 @@
 
 ## solution
 
-使用 Go 語言解決，編碼如下：
-
-```go
-func f1() {
-	jz := 1024
-	for {
-		jz = jz + 60
-		if jz > 2020 {
-			println(jz-60, jz)
-			break
-		}
-	}
-}
-```
+使用 Go 語言解決，代碼見 [函數f1](calendar_001_jiazi_year/main.go)
 
 執行後輸出結果爲：
 
