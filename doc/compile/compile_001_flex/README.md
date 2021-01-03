@@ -1,6 +1,6 @@
 ## case
 
-已知有 Go 文件 [hello.go](compile_001_flex/hello.go)，請使用 lex 工具對其進行詞法分析。
+已知有 Go 文件 [hello.go](hello.go)，請使用 lex 工具對其進行詞法分析。
 
 ## solution
 
@@ -12,7 +12,7 @@
 brew install flex
 ```
 
-（2）編寫 [lexer.l](compile_001_flex/lexer.l) 文件，設定詞法規則
+（2）編寫 [lexer.l](lexer.l) 文件，設定詞法規則
 
 （3）生成詞法分析器
 
@@ -23,7 +23,7 @@ lex lexer.l
 cc lex.yy.c -o lexer -ll
 ```
 
-（4）分析 [hello.go](compile_001_flex/hello.go) 中詞法
+（4）分析 [hello.go](hello.go) 中詞法
 
 ```bash
 cat hello.go | ./lexer

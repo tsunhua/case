@@ -1,10 +1,10 @@
 ## case
 
-已知有 Go 文件 [hello.go](compile_002_golang_lexer/hello.go)，請使用 Go 語言自帶的詞法分析器進行分析。
+已知有 Go 文件 [hello.go](hello.go)，請使用 Go 語言自帶的詞法分析器進行分析。
 
 ## solution
 
-使用 `io/ioutil` 讀取文件，使用 `go/scanner` 掃描並解析成 Token 序列，代碼見 [main.go](compile_002_golang_lexer/main.go)
+使用 `io/ioutil` 讀取文件，使用 `go/scanner` 掃描並解析成 Token 序列，代碼見 [main.go](main.go)
 
 執行 main.go
 
