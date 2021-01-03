@@ -6,6 +6,8 @@
 
 ## solution
 
+代碼見 [main.go](main.go)。
+
 ### f1
 
-【不允許使用額外的存儲結構】因此只能用 Golang 內建的方法了。strings.Index 可以查找某個字符在字符串中的索引。strings.Count 可以計算某個字符在字符串的數量。代碼見 [函數f1](main.go)
+【不允許使用額外的存儲結構】因此只能用 Golang 內建的方法了。strings.Index 可以查找某個字符在字符串中的索引。strings.Count 可以計算某個字符在字符串的數量。
