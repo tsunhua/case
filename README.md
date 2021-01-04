@@ -13,3 +13,9 @@
 ## 他者 (others)
 
 - [曆法 (calendar)](doc/calendar)
+
+## 致謝 (thanks)
+
+- [工程师应该怎么学习 - 曹春晖](https://xargin.com/how-to-learn/)
+- [gyuho/learn - github.com](https://github.com/gyuho/learn)
+- [lifei6671/interview-go - github.com](https://github.com/lifei6671/interview-go)
