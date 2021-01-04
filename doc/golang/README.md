@@ -24,3 +24,6 @@
 - [111 在loop中使用defer的問題](golang_111_defer_loop)
 - [112 defer是否在panic後被執行的問題](golang_112_defer_when_panic)
 - [113 runtime:搶佔式調度問題](golang_113_runtime_preemptive)
+- [114 map 並發問題](golang_114_map_concurrent)
+- [115 方法的指針接收者和值接收者問題](golang_115_method_receiver)
+- [116 接口是否爲 nil 的問題](golang_116_interface_if_nil)
