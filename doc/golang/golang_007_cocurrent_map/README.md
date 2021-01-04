@@ -5,11 +5,11 @@
 實現一個並發安全的 map，讀取 value 時如 key 不存在，則阻塞直到 key 存在或者超時。
 
 ```go
-type sp interface {
+type Smap interface {
 	// 寫入 key-value，非阻塞
-	Out(key string, val interface{})
+	Put(key string, val interface{})
 	// 根據 key 找 value。如 key 不存在，則則色直到 key 存在或超時
-    Rd(key string, timeout time.Duration) interface{}
+    Get(key string, timeout time.Duration) interface{}
 }
 ```
 
