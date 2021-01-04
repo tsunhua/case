@@ -10,7 +10,7 @@ func main() {
 	f2()
 }
 
-func f1()  {
+func f1() {
 	m := make(map[string]*student)
 	stus := []student{
 		{Name: "zhou", Age: 24},
@@ -23,7 +23,7 @@ func f1()  {
 	}
 }
 
-func f2()  {
+func f2() {
 	m := make(map[string]*student)
 	stus := []student{
 		{Name: "zhou", Age: 24},
