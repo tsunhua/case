@@ -15,3 +15,5 @@
 - [102 map value 尋址問題](golang_102_map_value_address)
 - [103 type switch 匹配多類型問題](golang_103_type_switch_case_many_types)
 - [104 for range 重用變量問題](golang_104_for_range_resuse_variable)
+- [105 序列化未導出的成員變量](golang_105_marshal_unexported_member)
+- [106 String 與 fmt.Sprintf 循環引用問題](golang_106_fmt_stringer)
