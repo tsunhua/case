@@ -13,14 +13,14 @@ type Smap interface {
 
 type MSmap struct {
 	c    map[string]interface{}
-	cham map[string]chan bool
+	cham map[string]chan struct{}
 	sync.RWMutex
 }
 
 func main() {
 	var m Smap = &MSmap{
 		c:    make(map[string]interface{}),
-		cham: make(map[string]chan bool),
+		cham: make(map[string]chan struct{}),
 	}
 
 	go func() {
@@ -41,7 +41,6 @@ func (m *MSmap) Put(key string, val interface{}) {
 	defer m.Unlock()
 	m.c[key] = val
 	if _, ok := m.cham[key]; ok {
-		m.cham[key] <- true
 		close(m.cham[key])
 	}
 }
@@ -52,7 +51,7 @@ func (m *MSmap) Get(key string, timeout time.Duration) interface{} {
 	}
 
 	m.Lock()
-	m.cham[key] = make(chan bool)
+	m.cham[key] = make(chan struct{})
 	m.Unlock()
 
 	defer func() {
