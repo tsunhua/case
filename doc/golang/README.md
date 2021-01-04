@@ -13,3 +13,5 @@
 
 - [101 嵌套 struct 的初始化問題](golang_101_init_nested_struct)
 - [102 map value 尋址問題](golang_102_map_value_address)
+- [103 type switch 匹配多類型問題](golang_103_type_switch_case_many_types)
+- [104 for range 重用變量問題](golang_104_for_range_resuse_variable)
