@@ -13,6 +13,10 @@ type Smap interface {
 
 type MSmap struct {
 	c    map[string]interface{}
+	// chan 使用空結構體，因爲空結構體不佔用內存空間，
+	// 參考：https://dave.cheney.net/2014/03/25/the-empty-struct
+	// chan 關閉後是不阻塞的，會不斷向接收者發送兩個值：使用類型的零值、結構體關閉的標識 false，
+	// 參考：https://dave.cheney.net/2013/04/30/curious-channels
 	cham map[string]chan struct{}
 	sync.RWMutex
 }
