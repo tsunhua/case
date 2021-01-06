@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{{ $user := . }}
+<html>
+<head>
+    <title>call method</title>
+</head>
+<body>
+{{ if $user.IsPaySuccess "pay-id" }}
+    Pay Success
+{{ else }}
+    Pending
+{{ end }}
+</body>
+</html>

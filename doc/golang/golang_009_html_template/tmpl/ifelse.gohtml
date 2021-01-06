@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{{ $name :=.Name }}
+<html>
+    <head>
+        <title>if else</title>
+    </head>
+    <body>
+        Hello,
+            {{ if $name}} {{ $name }}
+            {{ else }} Anonymous
+            {{ end }}
+        !
+    </body>
+</html>

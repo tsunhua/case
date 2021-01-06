@@ -1,0 +1,16 @@
+{{ define "cf" }}
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>call function</title>
+    </head>
+    <body>
+    {{/* 函數的參數有多少個就必須傳多少個，否則函數將不會被執行 */}}
+    {{ if isOK ""}}
+        Pay Success
+    {{ else }}
+        Pending
+    {{ end }}
+    </body>
+    </html>
+{{ end }}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>range</title>
+    </head>
+    <body>
+        <ol>
+            <!-- range 遍歷列表 -->
+            {{ range .Items}}
+                {{/* 管道符傳遞值，然後調用 printf 函數進行格式化 */}}
+                <li> {{ .Name }} : ${{ .Price | printf "%.2f" }} </li>
+            {{ end }}
+        </ol>
+
+        <div>
+            <!-- with 定義臨時變量 -->
+            <!-- index 獲得指定索引的值 -->
+            The first one is {{ with $x := index .Items 0 }} {{ $x.Name }} {{ end }}
+        </div>
+    </body>
+</html>

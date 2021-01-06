@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{{ $name := .Name }}
+{{ $age := .Age}}
+<html>
+<head>
+    <title>compare</title>
+</head>
+<body>
+{{/*
+可以使用小括號進行計算
+and 表示與操作
+ge 表示大於或等於
+*/}}
+{{ if and $name (ge $age 18) }}
+    Welcome
+{{ else }}
+    Gun
+{{ end }}
+</body>
+</html>
