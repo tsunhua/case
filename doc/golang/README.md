@@ -10,6 +10,7 @@
 - [006 機器人坐標問題](golang_006_robot_position)
 - [007 實現一個阻塞讀且並發安全的 map](golang_007_concurrent_map)
 - [008 高並發下的鎖與map的讀寫](golang_008_concurrent_map_2)
+- [009 使用 go html template](golang_009_html_template)
 
 ## 語法題
 

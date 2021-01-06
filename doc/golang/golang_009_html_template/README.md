@@ -1,6 +1,6 @@
 ## case
 
-使用 go template 構建一個站點。
+**使用 go html template**
 
 ## solution
 
