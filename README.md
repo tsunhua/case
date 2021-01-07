@@ -14,6 +14,7 @@
 
 - [曆法 (calendar)](doc/calendar)
 - [系統故障（System Error）](doc/system_error)
+- [工具（Tool）](doc/tool)
 
 ## 致謝 (thanks)
 
