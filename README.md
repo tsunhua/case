@@ -13,6 +13,7 @@
 ## 他者 (others)
 
 - [曆法 (calendar)](doc/calendar)
+- [系統故障（System Error）](doc/system_error)
 
 ## 致謝 (thanks)
 
