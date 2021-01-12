@@ -11,6 +11,9 @@
 - [007 實現一個阻塞讀且並發安全的 map](golang_007_concurrent_map)
 - [008 高並發下的鎖與map的讀寫](golang_008_concurrent_map_2)
 - [009 使用 go html template](golang_009_html_template)
+- [010 Go html 模板使用靜態資源](golang_010_html_template_use_static_resources)
+- [011 每隔1秒調用函數並保證函數不退出](golang_011_keep_repeat_call_func)
+- [012 爲 WaitGroup 添加 timeout 功能](golang_012_wait_group_timeout)
 
 ## 語法題
 
@@ -30,3 +33,6 @@
 - [114 map 並發問題](golang_114_map_concurrent)
 - [115 方法的指針接收者和值接收者問題](golang_115_method_receiver)
 - [116 接口是否爲 nil 的問題](golang_116_interface_if_nil)
+- [117 變量定義與賦值](golang_117_variable_define_and_assign)
+- [118 iota 賦值問題](golang_118_iota)
+- [119 兩個結構體是否相等問題](golang_119_struct_compare)
