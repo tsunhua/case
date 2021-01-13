@@ -36,3 +36,4 @@
 - [117 變量定義與賦值](golang_117_variable_define_and_assign)
 - [118 iota 賦值問題](golang_118_iota)
 - [119 兩個結構體是否相等問題](golang_119_struct_compare)
+- [120 數組或切片比較](golang_120_array_slice_compare)
