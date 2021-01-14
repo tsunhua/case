@@ -10,7 +10,7 @@
 1. 使用 mongodump 配合 bash 腳本每日備份數據到固定的文件夾。
 2. 使用 rsync 配合 bash 腳本每日增量同步服務器上的文件夾。
 
-注意：rsync 必須是服務器和電腦上都安裝才能使用。
+注意：rsync 必須是服務器和電腦上都安裝才能使用。命令參考 https://www.ruanyifeng.com/blog/2020/08/rsync.html
 
 代碼參見：[backup.sh](backup.sh)
 
