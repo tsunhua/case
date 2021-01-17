@@ -37,3 +37,6 @@
 - [118 iota 賦值問題](golang_118_iota)
 - [119 兩個結構體是否相等問題](golang_119_struct_compare)
 - [120 數組或切片比較](golang_120_array_slice_compare)
+- [Go實現單例模式](golang_121_singleton)
+- [保證接口一定被自己實現](golang_122_ensure_interface_implements)
+
