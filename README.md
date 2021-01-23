@@ -5,6 +5,7 @@
 ## 基石 (basic)
 
 - [編譯 (compile)](doc/compile)
+- [算法（algorithm）](doc/algorithm)
 
 ## 語言 (lang)
 
